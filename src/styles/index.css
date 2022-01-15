@@ -1,35 +1,29 @@
-
-/* 
-    You can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-*/
-body {
-    padding: 5px;
-}
-.counter-container {
-    display: flex;
-    align-items: center;
-
-    width: fit-content;
-
-    background-color: black;
-    border-radius: 6px;
-    padding: 5px;
-    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+.container-fluid {
+    min-height: 100vh;
 }
 
 .digit {
-    padding: 0px 5px;
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 2.50em;
+    color: white;
+    margin: 0 3px;
+    padding: 0 14px;
+    border: 1px solid rgb(84, 84, 84);
+    border-radius: 7px;
+    background-color: black;
+    box-shadow: 4px 4px 4px rgb(155 155 155);
+    cursor: default;
 }
 
-.digit-box {
-    font-family: 'IBM Plex Serif', serif;
-    font-size: 2.80em;
-    
-    padding: 5px 8px;
-    border: 1px solid #2c2c2c;
-    border-radius: 6px;
-    color: white;
+.digit.icon {
+    font-size: 2.20em;
+    padding: 0px 7px;
+}
+
+.digit.icon > svg {
+    vertical-align: middle;
+}
+
+.counter-controls > svg {
+    cursor: pointer;
 }

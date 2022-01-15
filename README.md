@@ -2,6 +2,8 @@
 
 ✏ *Creating a seconds-counter component that displays how many seconds have passed since the website finished loading. Inspired in ***./preview.gif****.
 
+⏱ The user can ***pause***, ***play*** or ***resume*** the counter.
+
 ## Preview 🎬
 * You can open this repository in **Gitpod**.
 * Start the webpack server with live reload running the next command: `$ npm run start`
