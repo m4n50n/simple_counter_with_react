@@ -1,5 +1,8 @@
 # ![4Geeks Logo](http://assets.breatheco.de/apis/img/images.php?blob&random&cat=icon&tags=4geeks,16) Simple Counter with React
 
+![screenshot](https://raw.githubusercontent.com/m4n50n/simple_counter_with_react/main/screenshot_preview.png)
+
+
 ✏ *Creating a seconds-counter component that displays how many seconds have passed since the website finished loading. Inspired in ***./preview.gif****.
 
 ⏱ The user can ***pause***, ***play*** or ***resume*** the counter.
