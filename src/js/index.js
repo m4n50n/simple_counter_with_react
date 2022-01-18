@@ -1,4 +1,4 @@
-//import react into the bundle
+// import react into the bundle
 import React from "react";
 import ReactDOM from "react-dom";
 
@@ -9,8 +9,13 @@ import "../styles/bootstrap.min.css";
 // import main component
 import Home from "./component/home.jsx";
 
-// counter status control
+// counter control
 let countdown = false;
+const alarm = {
+	status: false,
+	seconds: null,
+};
+
 const pause = 1;
 const play = 2;
 const reset = 3;
@@ -29,6 +34,11 @@ setInterval(() => {
 			: CounterStatus === reset
 			? 0
 			: counter;
+
+	/* check alarm */
+	if (alarm.status && parseInt(alarm.seconds) === counter) {
+		alert(`${alarm.seconds} seconds alarm!!`);
+	}
 
 	MainRender();
 }, 1000);
@@ -55,4 +65,12 @@ const ResetCounter = () => {
 	CounterStatus = reset;
 };
 
-export { ChangeDirection, PauseCounter, PlayCounter, ResetCounter };
+const SetAlarm = () => {
+	const Alarmvalue = document.querySelector("#alarm-seconds").value;
+	if (Alarmvalue.length > 0) {
+		alarm.status = !alarm.status;
+		alarm.seconds = Alarmvalue;
+	}
+};
+
+export { ChangeDirection, PauseCounter, PlayCounter, ResetCounter, SetAlarm };

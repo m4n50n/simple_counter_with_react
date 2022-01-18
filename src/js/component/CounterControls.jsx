@@ -12,6 +12,7 @@ import {
 	faPause,
 	faPlay,
 	faUndo,
+	faUserClock,
 } from "@fortawesome/free-solid-svg-icons";
 
 const CounterControls = () => {
@@ -37,6 +38,12 @@ const CounterControls = () => {
 					title="Restart counter"
 					icon={faUndo}
 					onClick={ResetCounter}
+				/>
+				<FontAwesomeIcon
+					title="Set alarm"
+					icon={faUserClock}
+					data-bs-toggle="modal"
+					data-bs-target="#alarm-modal"
 				/>
 			</div>
 		</div>
