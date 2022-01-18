@@ -7,7 +7,7 @@
 
 ## Goals 👽 
 - The user can ***pause***, ***resume***, ***restart*** or ***change direction*** the counter.
-- The user can create an alert to be notified when the counter reaches the specified seconds.
+- The user can ***create an alert*** to be notified when the counter reaches the specified seconds.
 
 ## Preview 🎬
 * You can open this repository in **Gitpod**.
