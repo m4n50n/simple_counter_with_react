@@ -5,7 +5,7 @@
 
 ✏ *Creating a seconds-counter component that displays how many seconds have passed since the website finished loading. Inspired in ***./preview.gif****.
 
-⏱ The user can ***pause***, ***resume***, ***restart*** or ***change direction** the counter.
+⏱ The user can ***pause***, ***resume***, ***restart*** or ***change direction*** the counter.
 
 ## Preview 🎬
 * You can open this repository in **Gitpod**.
