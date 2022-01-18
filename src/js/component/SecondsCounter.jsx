@@ -10,9 +10,9 @@ const SecondsCounter = (props) => {
 	};
 
 	return (
-		<div className="d-flex justify-content-center p-1 rounded-3">
+		<div className="d-flex justify-content-center p-0 rounded-3">
 			<div
-				className="digit icon"
+				className="digit icon px-2"
 				style={
 					props.seconds < 0
 						? { display: "block" }
