@@ -10,6 +10,7 @@ import "../styles/bootstrap.min.css";
 import Home from "./component/home.jsx";
 
 // counter status control
+let countdown = false;
 const pause = 1;
 const play = 2;
 const reset = 3;
@@ -22,7 +23,9 @@ setInterval(() => {
 		CounterStatus === pause
 			? counter
 			: CounterStatus === play
-			? counter + 1
+			? !countdown
+				? counter + 1
+				: counter - 1
 			: CounterStatus === reset
 			? 0
 			: counter;
@@ -34,6 +37,10 @@ const MainRender = () => {
 	CounterStatus = CounterStatus === reset ? play : CounterStatus;
 
 	ReactDOM.render(<Home counter={counter} />, document.querySelector("#app"));
+};
+
+const ChangeDirection = () => {
+	countdown = !countdown;
 };
 
 const PauseCounter = () => {
@@ -48,4 +55,4 @@ const ResetCounter = () => {
 	CounterStatus = reset;
 };
 
-export { PauseCounter, PlayCounter, ResetCounter };
+export { ChangeDirection, PauseCounter, PlayCounter, ResetCounter };

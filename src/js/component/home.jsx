@@ -5,25 +5,31 @@ import SecondsCounter from "./SecondsCounter.jsx";
 import CounterControls from "./CounterControls.jsx";
 
 const Home = (props) => {
-	const digits = {
-		one: Math.floor(props.counter % 10),
-		two: Math.floor((props.counter / 10) % 10),
-		three: Math.floor((props.counter / 100) % 10),
-		four: Math.floor((props.counter / 1000) % 10),
-	};
-
 	return (
 		<div className="container-fluid bg-dark bg-opacity-25">
 			<div className="row pt-3 justify-content-center">
 				<div className="col-auto">
-					<h1 className="text-center">
-						Seconds-Counter with{" "}
-						<strong>
-							<i>React</i>
-						</strong>
-					</h1>
+					<div className="app-title text-center">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="45"
+							height="45"
+							fill="currentColor"
+							className="bi bi-stopwatch"
+							viewBox="0 0 16 16">
+							<path d="M8.5 5.6a.5.5 0 1 0-1 0v2.9h-3a.5.5 0 0 0 0 1H8a.5.5 0 0 0 .5-.5V5.6z" />
+							<path d="M6.5 1A.5.5 0 0 1 7 .5h2a.5.5 0 0 1 0 1v.57c1.36.196 2.594.78 3.584 1.64a.715.715 0 0 1 .012-.013l.354-.354-.354-.353a.5.5 0 0 1 .707-.708l1.414 1.415a.5.5 0 1 1-.707.707l-.353-.354-.354.354a.512.512 0 0 1-.013.012A7 7 0 1 1 7 2.071V1.5a.5.5 0 0 1-.5-.5zM8 3a6 6 0 1 0 .001 12A6 6 0 0 0 8 3z" />
+						</svg>
 
-					<SecondsCounter digits={digits} />
+						<h1 className="text-center mt-1">
+							Seconds-Counter with{" "}
+							<strong>
+								<i>React</i>
+							</strong>
+						</h1>
+					</div>
+
+					<SecondsCounter seconds={props.counter} />
 					<CounterControls />
 				</div>
 			</div>

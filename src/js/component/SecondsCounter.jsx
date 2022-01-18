@@ -1,26 +1,36 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock } from "@fortawesome/free-regular-svg-icons";
-
 const SecondsCounter = (props) => {
+	const digits = {
+		units: Math.floor(Math.abs(props.seconds) % 10),
+		ten: Math.floor((Math.abs(props.seconds) / 10) % 10),
+		hundred: Math.floor((Math.abs(props.seconds) / 100) % 10),
+		thousand: Math.floor((Math.abs(props.seconds) / 1000) % 10),
+	};
+
 	return (
 		<div className="d-flex justify-content-center p-1 rounded-3">
-			<div className="digit icon">
-				<FontAwesomeIcon icon={faClock} />
+			<div
+				className="digit icon"
+				style={
+					props.seconds < 0
+						? { display: "block" }
+						: { display: "none" }
+				}>
+				-
 			</div>
 
-			<div className="digit">{props.digits.four}</div>
-			<div className="digit">{props.digits.three}</div>
-			<div className="digit">{props.digits.two}</div>
-			<div className="digit">{props.digits.one}</div>
+			<div className="digit">{digits.thousand}</div>
+			<div className="digit">{digits.hundred}</div>
+			<div className="digit">{digits.ten}</div>
+			<div className="digit">{digits.units}</div>
 		</div>
 	);
 };
 
 SecondsCounter.propTypes = {
-	digits: PropTypes.object,
+	seconds: PropTypes.number,
 };
 
 export default SecondsCounter;
